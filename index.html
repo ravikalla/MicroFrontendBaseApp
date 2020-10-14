@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="qs.js"></script>
-</head>
-<body onload="renderContent(qs.get()['mfName'])">
-    <button type="button" onclick="document.getElementById('demo').innerHTML = qs.get()['mfName']">Click me to view MicroFrontendName</button>
-    <p id="demo"></p>
-    <script>
-        function renderContent(mfName) {
-            document.getElementById('demo').innerHTML = '<' + mfName + '>';
-        }
-    </script>
-</body>
+    <head>
+        <script src="qs.js"></script>
+    </head>
+    <body onload="renderContent(qs.get()['mfName'])">
+        <p id="demo"></p>
+        <p id="mfContent"></p>
+        <script>
+            function renderContent(mfName) {
+                var mfTag = '<' + mfName + '>' + '</' + mfName + '>';
+                document.getElementById("demo").innerHTML = mfTag;
+
+                var script = document.createElement('script');
+                script.onload = function() {
+                    document.getElementById("mfContent").innerHTML = data();
+                }
+                script.src = mfName + ".js";
+                document.head.appendChild(script);
+            }
+        </script>
+        <button type="button" onclick="document.getElementById('mfContent').innerHTML = data()">Click me to view MicroFrontendName</button>
+    </body>
 </html>
