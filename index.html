@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="qs.js"></script>
+</head>
+<body onload="renderContent(qs.get()['mfName'])">
+    <button type="button" onclick="document.getElementById('demo').innerHTML = qs.get()['mfName']">Click me to view MicroFrontendName</button>
+    <p id="demo"></p>
+    <script>
+        function renderContent(mfName) {
+            document.getElementById('demo').innerHTML = '<' + mfName + '>';
+        }
+    </script>
+</body>
+</html>
