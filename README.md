@@ -10,7 +10,7 @@ git clone https://github.com/ravikalla/MicroFrontendBaseApp.git
 
 2. Open the app in local browser
 
-[file:///Users/<user name>/Desktop/MicroFrontendBaseApp/index.html?mfName=mf1](file:///Users/<user name>/Desktop/MicroFrontendBaseApp/index.html?mfName=mf1)
+`/Users/<user name>/Desktop/MicroFrontendBaseApp/index.html?mfName=mf1`
 
 3. Open the application after deploying in application/web server
 
